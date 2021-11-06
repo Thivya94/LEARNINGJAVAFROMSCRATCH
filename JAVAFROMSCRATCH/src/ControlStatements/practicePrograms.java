@@ -23,7 +23,7 @@ public class practicePrograms {
 		else {
 			System.out.println(num+ " is positive");
 		}
-		
+		//test
 		sc.close();
 	}
 	
