@@ -7,10 +7,12 @@ public class practicePrograms {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		practicePrograms ifcs=new practicePrograms();
-		//ifcs.checkPositiveOrNegative();
-		//ifcs.findGreatest();
+		ifcs.checkPositiveOrNegative();
+		ifcs.findGreatest();
 		String value=ifcs.findWeekday();
 		System.out.println(value);
+		ifcs.forlabel();
+		ifcs.foreachvalidation();
 	}
 	public void checkPositiveOrNegative() {
 		Scanner sc=new Scanner(System.in);
@@ -26,7 +28,45 @@ public class practicePrograms {
 		//newly added
 		sc.close();
 	}
+	public void forlabel() {
+		firstloop:
+		for(int i=0;i<=10;i++) {
+			System.out.println(i);
+			secondloop:
+				for(int j=0;j<=10;j++) {
+					System.out.println(j);
+					if(j==3) {
+						continue firstloop;
+					}
+					if(j==1) {
+						continue secondloop;
+					}
+					if(j==2) {
+						break secondloop;
+					}
+							
+				}
+			
+		}
+	}
 	
+	public void foreachvalidation() {
+		String[] names= {"latha","liya","shreya","surya","preetha","ishwarya","ashwin"};
+		for(String name : names){
+			System.out.println(name);
+		}
+		char[] letters= {'a','e','i','o','u'};
+		for(char letter:letters) {
+			System.out.println(letter);
+		}
+		Scanner sc=new Scanner(System.in);
+		String[] getvaluesfromuser= {sc.next(),sc.next(),sc.next(),sc.next()};
+		for(String values:getvaluesfromuser) {
+			System.out.println(values);
+		}
+		sc.close();
+		
+	}
 	public String findWeekday() {
 		Scanner sc=new Scanner(System.in);
 		int day=sc.nextInt();
