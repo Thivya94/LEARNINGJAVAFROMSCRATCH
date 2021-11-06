@@ -17,7 +17,8 @@ public class practicePrograms {
 //		ifcs.forlabel();
 //		ifcs.foreachvalidation();
 	//	ifcs.palindrome();
-		ifcs.reverseString();
+	//	ifcs.reverseString();
+		ifcs.infiniteloop();
 	}
 	
 	public void checkPositiveOrNegative() {
@@ -124,6 +125,15 @@ public class practicePrograms {
 		System.out.println("The reversed string is : "+compare);
 		sc.close();
 	
+	}
+	public void infiniteloop() {
+		for(;;) {
+			System.out.println("hi");
+		}
+		//syntax for infinite loop using while loop
+		/*
+		 * while(true) { System.out.println("hi in while"); }
+		 */
 	}
 	public void palindrome() {
 		Scanner sc=new Scanner(System.in);
