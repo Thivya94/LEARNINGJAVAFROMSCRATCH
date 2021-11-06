@@ -1,5 +1,8 @@
 package ControlStatements;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class practicePrograms {
@@ -7,13 +10,16 @@ public class practicePrograms {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		practicePrograms ifcs=new practicePrograms();
-		ifcs.checkPositiveOrNegative();
-		ifcs.findGreatest();
-		String value=ifcs.findWeekday();
-		System.out.println(value);
-		ifcs.forlabel();
-		ifcs.foreachvalidation();
+//		ifcs.checkPositiveOrNegative();
+//		ifcs.findGreatest();
+//		String value=ifcs.findWeekday();
+//		System.out.println(value);
+//		ifcs.forlabel();
+//		ifcs.foreachvalidation();
+	//	ifcs.palindrome();
+		ifcs.reverseString();
 	}
+	
 	public void checkPositiveOrNegative() {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Provide the number");
@@ -103,6 +109,39 @@ public class practicePrograms {
 		if((n3>n1) &&(n3>n2)) {
 			System.out.println(n3+" is greatest");
 		}
+		sc.close();
 	}
+	public void reverseString() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the value");
+		String value=sc.next();
+	char[] actual=value.toCharArray();
+		String compare="";
+		for(int i=actual.length-1;i>=0;i--) {
+			compare=compare+actual[i];
+			
+		}
+		System.out.println("The reversed string is : "+compare);
+		sc.close();
 	
+	}
+	public void palindrome() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the value to be tested for palindrome");
+		String value=sc.next();
+		char[] actual=value.toCharArray();
+		String compare="";
+		for(int i=actual.length-1;i>=0;i--) {
+			compare=compare+actual[i];
+			
+		}
+		System.out.println(compare);
+		if(compare.equals(value)) {
+			System.out.println("given value is palindrome");
+		}
+		else {
+			System.out.println("not palindrome");
+		}
+		sc.close();
+	}
 }
